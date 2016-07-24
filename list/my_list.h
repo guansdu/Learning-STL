@@ -29,7 +29,7 @@ struct ListIterator
 	link_type node;
 	//构造函数
 	ListIterator() { }
-	ListIterator(link_type x) : node(x) { }    //这里利用了ListNode默认的拷贝构造函数
+	ListIterator(link_type x) : node(x) { }    //！！（错：这里利用了ListNode默认的拷贝构造函数）这是初始化类的成员变量的方式，并不是拷贝构造函数
 	ListIterator(const iter& x) : node(x.node) { }
 	//操作符重载
 	bool operator==(const self& x) { return node == x.node; }
