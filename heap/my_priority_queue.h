@@ -64,4 +64,4 @@ void MyPriorityQueue<T>::pop()
 	ve.pop_back();
 }
 
-#endif
+#endif //_MY_PRIORITY_QUEUE_H 
