@@ -123,7 +123,22 @@ public:
 		CopyFrom(ht);
 	}
 
+	//析构函数
 	~HashTable() { Clear(); }
+
+	//赋值操作符
+	HashTable& operator=(const HashTable& ht)
+	{
+		if (&ht != this)
+		{
+			Clear();
+			hash = ht.hash;
+			equals = ht.equals;
+			get_key = ht.get_key;
+			CopyFrom(ht);
+		}
+		return *this;
+	}
 
 	size_t size() const { return num_elements; }
 
